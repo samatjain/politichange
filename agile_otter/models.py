@@ -1,15 +1,6 @@
 from django.db import models
 from django.contrib import admin
 
-class User(models.Model):
-	name 	  		= models.CharField(max_length=255)
-	address 		= models.CharField(max_length=255)
-	email	  		= models.EmailField(max_length=255)
-	bio     		= models.TextField()
-	philosophy 	= models.TextField()
-	goals			= models.CharField(max_length=255)
-	# links			= models.ForeignKey('Link')
-
 class Campaign(models.Model):
 	position				= models.CharField(max_length=255)
 	# fiveStances 		= models.ForeignKey('Stance')
@@ -30,6 +21,6 @@ class Link(models.Model):
 class Stance(models.Model):
 	text	= models.TextField()
 
-models = [User, Campaign, Link, Stance]
+models = [Campaign, Link, Stance]
 
 map(admin.site.register,models)
