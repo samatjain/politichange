@@ -5,14 +5,14 @@ class User(models.Model):
 	name 	  		= models.CharField(max_length=255)
 	address 		= models.CharField(max_length=255)
 	email	  		= models.EmailField(max_length=255)
-	# bio     		= models.TextField()
-	philosophy 	= models.TextField()
+	# # bio     		= models.TextField()
+	# philosophy 	= models.TextField()
 	goals			= models.CharField(max_length=255)
 	links			= models.ForeignKey('Link')
 
 class Campaign(models.Model):
 	position				= models.CharField(max_length=255)
-	# fiveStances 		= models.ForeignKey('Stance')
+	fiveStances 		= models.ForeignKey('Stance')
 	first100Days		= models.TextField()
 	whyBestCandidate	= models.TextField()
 	videoURL				= models.CharField(max_length=255)
