@@ -4,7 +4,7 @@ from django.contrib import admin
 class User(models.Model):
 	name 	  		= models.CharField(max_length=255)
 	address 		= models.CharField(max_length=255)
-	email	  		= models.EmailField(max_length=255,unique=True)
+	email	  		= models.EmailField(max_length=255)
 	bio     		= models.TextField()
 	philosophy 	= models.TextField()
 	goals			= models.CharField(max_length=255)
@@ -12,7 +12,7 @@ class User(models.Model):
 
 class Campaign(models.Model):
 	position				= models.CharField(max_length=255)
-	# fiveStances 		= models.ManyToManyField()
+	fiveStances 		= models.ForeignKey('Stance')
 	first100Days		= models.TextField()
 	whyBestCandidate	= models.TextField()
 	videoURL				= models.CharField(max_length=255)
@@ -27,6 +27,9 @@ class Link(models.Model):
 	title		=	models.CharField(max_length=255)
 	URL		=  models.CharField(max_length=255)
 	
-models = [User, Campaign, Link]
+class Stance(models.Model):
+	text	= models.TextField()
+
+models = [User, Campaign, Link, Stance]
 
 map(admin.site.register,models)
