@@ -124,7 +124,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
-    'django.contrib.admindocs'
+    'django.contrib.admindocs',
+	 'agile_otter'
 )
 
 # A sample logging configuration. The only tangible logging
@@ -157,3 +158,10 @@ LOGGING = {
 }
 
 SITE_URL = 'http://mauve-duck.herokuapp.com/'
+
+# Parse database configuration from $DATABASE_URL
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
