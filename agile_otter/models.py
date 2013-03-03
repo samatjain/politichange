@@ -21,7 +21,7 @@ class Link(models.Model):
 class Stance(models.Model):
 	text	= models.TextField()
 
-class User(models.Model):
+class Participant(models.Model):
 	name 	  		= models.CharField(max_length=255)
 	address 		= models.CharField(max_length=255)
 	email	  		= models.EmailField(max_length=255)
@@ -30,6 +30,6 @@ class User(models.Model):
 	goals			= models.CharField(max_length=255)
 	# links			= models.ForeignKey('Link')
 
-models = [Campaign, Link, Stance, User]
+models = [Campaign, Link, Stance, Participant]
 
 map(admin.site.register,models)
