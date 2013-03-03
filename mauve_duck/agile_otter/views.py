@@ -9,3 +9,7 @@ def index(request):
             'all_users': all_users
             }
     return render(request, 'index.html', context)
+
+def registration(request):
+	"""Registration page template called and info saved"""
+	return render(request, 'registration.html', context)
