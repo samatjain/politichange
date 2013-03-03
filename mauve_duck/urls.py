@@ -20,9 +20,10 @@ urlpatterns = patterns('',
 
     url(r'^browserid/', include('django_browserid.urls')),
 
- 	 url(r'^campaign/index', views.registration, name='register'),
+ 	 url(r'^campaign', views.registration, name='register'),
 
  	 url(r'^participants$', views.participants_list, name='register'),
+ 	 url(r'^participants/profile-female$', views.participant_profile, name='profile'),
 
  	 url(r'^politician$', views.politician_start, name='politician_start'),
  	 url(r'^politician/create-campaign', views.start_campaign, name='campaign_start'),
