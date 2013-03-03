@@ -1,0 +1,53 @@
+{% load gravatar %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<style>
+			article {
+				padding: 1em;
+			}
+
+			.avatar-list {
+				padding: 1ex;
+			}
+
+			.avatar {
+				display: inline-block;
+				border: 1px solid #999;
+				border-radius: 50%;
+				box-shadow: 0px 1px 1px 1px #bbb;
+				padding: 3px;
+			}
+			.avatar img {
+				border: 0;
+				margin: 0;
+				border-radius: 50%;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="navbar navbar-static-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href='/'>Politichange</a>
+						<ul class="nav">
+							<li class="active"><a href="">Participants</a></li>
+							<li><a href="">Campaigns</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<article>
+		{% block content %}{% endblock %}
+		</article>
+
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

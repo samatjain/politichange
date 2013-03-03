@@ -1,53 +1,37 @@
-{% load gravatar %}
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>{% block title %}{% endblock %}</title>
-		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta charset="utf-8">
-		<style>
-			article {
-				padding: 1em;
-			}
+<head>
+<title>PolitiChange - Facilitating Political Change</title>
 
-			.avatar-list {
-				padding: 1ex;
-			}
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="eric-meyers-css-reset.css">
+	<link rel="stylesheet" type="text/css" href="base.css">
 
-			.avatar {
-				display: inline-block;
-				border: 1px solid #999;
-				border-radius: 50%;
-				box-shadow: 0px 1px 1px 1px #bbb;
-				padding: 3px;
-			}
-			.avatar img {
-				border: 0;
-				margin: 0;
-				border-radius: 50%;
-			}
-			
-		</style>
-	</head>
-	<body>
-		<div class="navbar navbar-static-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="brand" href='/'>Politichange</a>
-						<ul class="nav">
-							<li class="active"><a href="">Participants</a></li>
-							<li><a href="">Campaigns</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+</head>
+<body id="home">
+    <div id="container">
+    
+    
+        <div id="header">
+            <a class="left" href="index.html"><img src="images/politichange-logo.png" alt=""></a>
+            <form class="right" name="login-form" action="" method="get">
+                <input type="text" name="username" placeholder="Username">
+                <input type="text" name="password" placeholder="Password">
+                <input type="submit" value="Login">
+            </form>
+        </div>
 
-		<article>
-		{% block content %}{% endblock %}
-		</article>
+		  <article>
+		    {% block content %}{% endblock %}
+		  </article>
 
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js">
+	</script>
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js">
+	</script>
+
+	   <div id="footer">
+	   </div>
+    </div>
 </body>
 </html>

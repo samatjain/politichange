@@ -1,0 +1,71 @@
+/* Red #C22
+Blue #359 */
+
+/*layout*/
+html, body {margin: 0; padding: 0;}
+#container {padding: 50px; width: 1000px;}
+#header {height: 50px; width: 100%;}
+    #header .left {float: left;}
+    #header .right {float: right;}
+#leadIn {border-top: 1px solid #C22; border-bottom: 1px solid #C22; margin: 20px 0 50px 0; padding: 40px 0 40px 0; width: 100%;}
+#main {width: 100%;}
+    #home #main {width: 700px; padding: 0 150px 0 150px;}
+.col-2 {float: left; padding-right: 2%; width: 31.333333%;} /*313px/1000*/
+.col-3 {float: left; padding-right: 2%; width: 48%;} /*480px/1000*/
+.col-4 {float: left; padding-right: 2%; width: 64.666666%;} /*480px/1000*/
+.col-6 {width:100%;}
+
+p.half, input.half {float: left; width: 48%; padding-right: 2%;}
+
+img {max-width: 100%;}
+#politicianCreate #main, #constituentProfile #main {padding-top: 40px;}
+
+.profile-image {width: 100%; height: 320px; background-image: url('images/profile-male.jpg');}
+
+.zipcode {text-align: center;}
+
+#footer {clear: both; height: 20px;}
+
+/*typography*/
+h1, h2, h3, p {font-size: 10px;}
+p {color: #C22; font-family: 'PT Serif', georgia, serif; font-weight: 400;}
+a {font-family: 'PT Sans', arial, sans-serif; font-weight: 400;}
+strong {font-weight: 700;}
+em {font-style: italic;}
+
+#main a, input.button {background-color: #C22; color: #FFF; display:block; font-size: 1.5em; line-height: 1.4em; padding: 20px; text-align: center; text-decoration: none; width 100%;}
+#main a.blue, input.button.blue {background-color: #359;}
+
+#main a:hover, input.button:hover {background-color: #D33;}
+#main a.blue:hover, input.button.blue:hover {background-color: #46A;}
+
+#leadIn p, .zipcode {font-size: 1.5em; line-height: 1.4em; text-align: center;}
+#main p {font-size: 1em; line-height: 1.3em; padding-bottom: 10px;}
+    #main p.top {border-top: 1px solid #C22; color: #C22; margin-top: 10px; padding-top: 10px;}
+    #main p.top.blue {border-top: 1px solid #359; color: #359;}
+    
+#main h3 {font-weight: bold; font-family: 'PT Sans', arial, sans-serif; font-size: 1em; line-height: 1.3em;}
+
+ul li {font-family: 'PT Sans', arial, sans-serif; line-height: 1.3em; margin: 5px 0 0 0;}
+#header li {display: inline; margin: 0 20px 0 0;}
+    #header li a { text-decoration: none; color: #359;}
+    #header li a:hover {color: #46A;}
+    
+#politicianCreate p {color: #000; font-family: 'PT Sans', arial, sans-serif; font-weight: 400; padding-bottom: 20px;}
+#politicianCreate input {width: 95%;}
+
+#constituentProfile p {color: #000; font-weight: 400; padding-bottom: 20px; line-height: 1.3em;}
+.profile-image {margin-bottom: 20px;}
+   #constituentProfile .profile-image p {color: #C22; margin: 0 0 0 20px; padding: 230px 10px 0 10px; vertical-align: bottom; font-family: 'PT Sans', arial, sans-serif;}
+        .profile-image p span {background-color: #FFF;}
+        
+#constituentProfile div.info p {color: #359; font-family: 'PT Sans', arial, sans-serif;}
+    #constituentProfile div.info p.num, input.big {font-size: 2em; padding-bottom: 0; font-weight: 700;}
+    #constituentProfile div.info p.label {text-transform: uppercase;}
+    
+    #constituent a.button {padding: 5px; font-size: .7em; width: 20%; display: inline; margin-bottom: px;}
+    
+#constituent a.list {background-color: #FFF; padding: 0; border: 1px solid #EEE; color: #000; font-size: 0.7em; margin: 5px;}
+#constituent a.list:hover {background-color: #EEE;}
+
+    #constituent a.list.first {margin-top: 50px;}
