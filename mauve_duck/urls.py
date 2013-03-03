@@ -4,6 +4,7 @@ from mauve_duck.agile_otter import views
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -20,7 +21,7 @@ urlpatterns = patterns('',
 
     url(r'^browserid/', include('django_browserid.urls')),
 
- 	 url(r'^campaign', views.registration, name='register'),
+ 	 url(r'^campaign$', views.registration, name='register'),
 
  	 url(r'^participants$', views.participants_list, name='register'),
  	 url(r'^participants/profile-female$', views.participant_profile, name='profile'),
