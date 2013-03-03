@@ -115,8 +115,9 @@ TEMPLATE_DIRS = (
 
 INSTALLED_APPS = (
     'django.contrib.auth',
-	 'django_browserid',
-	 'django_gravatar',
+    'django_browserid',
+    'django_gravatar',
+    'bootstrapped',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
@@ -126,7 +127,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
-	 'mauve_duck.agile_otter'
+    'mauve_duck.agile_otter'
 )
 
 # A sample logging configuration. The only tangible logging
