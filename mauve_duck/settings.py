@@ -168,9 +168,12 @@ DATABASES['default'] =  dj_database_url.config()
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-#AUTHENTICATION_BACKENDS = (
-#        'django_browserid.auth.BrowserIDBackend',
-#        )
+BROWSERID_CREATE_USER = True
+
+AUTHENTICATION_BACKENDS = (
+        'django.contrib.auth.backends.ModelBackend',
+        'django_browserid.auth.BrowserIDBackend',
+        )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
         'django.contrib.auth.context_processors.auth',
