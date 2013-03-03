@@ -24,4 +24,5 @@ urlpatterns = patterns('',
 
  	 url(r'^politician/index', views.politician_start, name='politician_start'),
  	 url(r'^politician/create-campaign', views.start_campaign, name='campaign_start'),
+ 	 url(r'^politician/campaign', views.campaign, name='campaign'),
 )

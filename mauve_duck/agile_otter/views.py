@@ -38,3 +38,6 @@ def start_campaign(request):
 def politician_start(request):
 	"""page for politician action initiation """
 	return render(request, 'politician/index.html', {})
+	
+def campaign(form):
+	return render(request, 'politician/campaign.html', {})
