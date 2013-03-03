@@ -46,7 +46,7 @@
 	© 2013 Us. All rights reserved.
 </footer>
 
-<form method="POST" action="{% url browserid_verify %}">
+<form method="POST" action="{% url 'browserid_verify' %}">
 	 {% csrf_token %}
 	 {{ browserid_form.as_p }}
 </form>
