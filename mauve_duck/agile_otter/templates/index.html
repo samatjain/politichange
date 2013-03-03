@@ -6,11 +6,11 @@
 {% block content %}
 
 {% if all_users %}
-	<ul class="participant-list">
+	<div class="avatar-list">
 		{% for user in all_users %}
-		<li><div class="avatar">{% gravatar user.email 96 %}</div></li>
+		<div class="avatar">{% gravatar user.email 96 %}</div>
 		{% endfor %}
-	</ul>
+	</div>
 {% endif %}
 
 {% endblock %}
