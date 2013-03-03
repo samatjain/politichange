@@ -17,4 +17,8 @@ def registration(request):
 
 def start_campaign(request):
 	"""Register a new campaign """
+	return render(request, 'politician/create-campaign.html', {})
+	
+def politician_start(request):
+	"""page for politician action initiation """
 	return render(request, 'politician/index.html', {})

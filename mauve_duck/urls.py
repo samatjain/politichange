@@ -22,5 +22,6 @@ urlpatterns = patterns('',
 
  	 url(r'^constituent/index', views.registration, name='register'),
 
- 	 url(r'^politician/index', views.start_campaign, name='campaign_start'),
+ 	 url(r'^politician/index', views.politician_start, name='politician_start'),
+ 	 url(r'^politician/create-campaign', views.start_campaign, name='campaign_start'),
 )
