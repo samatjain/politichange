@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>PolitiChange - Facilitating Political Change</title>
+	<title>{% block title %}{% endblock %} — PolitiChange: Facilitating Political Change</title>
 
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="/static/eric-meyers-css-reset.css">
-	<link rel="stylesheet" type="text/css" href="/static/base.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
 
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+	<link type="text/css" href="/static/base.css" rel="stylesheet">
 </head>
-<body id="home">
-    <div id="container">
-    
-    
-        <div id="header">
-            <a class="left" href="index.html"><img src="/static/images/politichange-logo.png" alt=""></a>
-            <form class="right" name="login-form" action="" method="get">
-                <input type="text" name="username" placeholder="Username">
-                <input type="text" name="password" placeholder="Password">
-                <input type="submit" value="Login">
-            </form>
-        </div>
+<body>
+	<header class="navbar navbar-static-top">
+		<a class="brand" href="index.html"><img src="/static/images/politichange-logo.png" alt=""></a>
+		<ul class="nav">
+			<li><a href="">Participants</a></li>
+			<li><a href="">Campaigns</a></li>
+		</ul>
+	</header>
 
-		  <article>
-		    {% block content %}{% endblock %}
-		  </article>
+	<article id="container">
+		{% block content %}{% endblock %}
+	</article>
 
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js">
-	</script>
-	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js">
-	</script>
+<footer>
+	© 2013 Us. All rights reserved.
+</footer>
 
-	   <div id="footer">
-	   </div>
-    </div>
-</body>
-</html>
+ </div>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+</body> </html>
