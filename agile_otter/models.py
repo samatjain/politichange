@@ -3,7 +3,7 @@ from django.contrib import admin
 
 class Campaign(models.Model):
 	position				= models.CharField(max_length=255)
-	fiveStances 		= models.ForeignKey('Stance')
+	# fiveStances 		= models.ForeignKey('Stance')
 	first100Days		= models.TextField()
 	whyBestCandidate	= models.TextField()
 	videoURL				= models.CharField(max_length=255)
@@ -28,7 +28,7 @@ class Participant(models.Model):
 	bio     		= models.TextField()
 	philosophy 	= models.TextField()
 	goals			= models.CharField(max_length=255)
-	# links			= models.ForeignKey('Link')
+	links			= models.ForeignKey('Link')
 
 models = [Campaign, Link, Stance, Participant]
 
