@@ -5,19 +5,22 @@
 	<head>
 		{% bootstrap_css %}
 		{% bootstrap_js all %}
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+
 	</head>
 	<body>
-		<div class="container">
 		<div class="navbar navbar-static-top">
 			<div class="navbar-inner">
-				<a class="brand" href='/'>Politichange</a>
-				<ul class="nav">
-					<li class="active"><a href="">Participants</a></li>
-					<li><a href="">Campaigns</a></li>
-				</ul>
+				<div class="container">
+					<a class="brand" href='/'>Politichange</a>
+						<ul class="nav">
+							<li class="active"><a href="">Participants</a></li>
+							<li><a href="">Campaigns</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
-	</div>
 
 {% if all_users %}
 	<ul>
