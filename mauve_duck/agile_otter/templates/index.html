@@ -1,16 +1,21 @@
 {% extends "base.html" %}
-{% load gravatar %}
+        
+        {% block content %}
+		
+        <div id="leadIn">
+            <p>"Campaign Critter is a platform for citizens to become more involved<br /> in government as a new official, or supporting new officials."</p>
+        </div>
+        
+        
+        <div id="main">
+            <div class="col-3">
+                <a class="blue" href="politician/index.html"><strong>Start</strong> a New Campaign</a>
+                <p class="blue top">Starting a new campaign is for new politicians who have garnered interest, and are finding a way to now fund their campaign</p>
+            </div>
+            <div class="col-3">
+                <a href="constituent/index.html"><strong>Support</strong> a Campaign</a>
+                <p class="top">Supporting a campaign is for constituents to find and support new political players</p>
+            </div>
+        </div>
 
-{% block title %}{% endblock %}
-
-{% block content %}
-
-{% if all_users %}
-	<div class="avatar-list">
-		{% for user in all_users %}
-		<div class="avatar">{% gravatar user.email 96 %}</div>
-		{% endfor %}
-	</div>
-{% endif %}
-
-{% endblock %}
+		{% endblock %}
