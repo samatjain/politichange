@@ -72,4 +72,3 @@ def campaign(request):
 
 def logout(request):
 	django.contrib.auth.logout(request)
-	return render(request, '/')
