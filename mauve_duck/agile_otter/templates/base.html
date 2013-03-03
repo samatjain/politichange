@@ -21,13 +21,12 @@
 					<li><a href="/campaign">Campaigns</a></li>
 				</ul>
 				<ul class="nav pull-right">
-					<li>
 						{% if not user.is_authenticated %}
-						<a class="browserid-login" href="#">Sign In</a>
+						<li><a class="browserid-login" href="#">Sign In</a></li>
 						{% else %}
-						<a href="">Signed in as {{ user.email }}</a> (<a href="{% url 'logout' %}">Log out</a>)
+						<li><a href="">Signed in as {{ user.email }}</a></li>
+						<li><a href="{% url 'logout' %}">Log out</a></li>
 						{% endif %}
-					</li>
 				</ul>
 			</div>
 		</div>
