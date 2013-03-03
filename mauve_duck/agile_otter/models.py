@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib import admin
+from django.contrib.auth.models import User
 
 class Link(models.Model):
 	title		=	models.CharField(max_length=255)
@@ -22,9 +23,8 @@ class Stance(models.Model):
 	text	= models.TextField()
 
 class Participant(models.Model):
-	name 	  		= models.CharField(max_length=255)
+	user = models.ForeignKey(User, unique=True)
 	address 		= models.CharField(max_length=255)
-	email	  		= models.EmailField(max_length=255)
 	bio     		= models.TextField()
 	philosophy 	= models.TextField(blank=True,null=True)
 	goals			= models.CharField(max_length=255)

@@ -170,6 +170,8 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 BROWSERID_CREATE_USER = True
 
+AUTH_PROFILE_MODULE = 'mauve_duck.agile_otter.Participant'
+
 AUTHENTICATION_BACKENDS = (
         'django.contrib.auth.backends.ModelBackend',
         'django_browserid.auth.BrowserIDBackend',
