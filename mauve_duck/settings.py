@@ -160,7 +160,7 @@ LOGGING = {
 }
 
 SITE_URL = 'http://politichange.herokuapp.com/'
-LOGIN_REDIRECT_URL = '/participants/me'
+#LOGIN_REDIRECT_URL = '/participants/me'
 
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
