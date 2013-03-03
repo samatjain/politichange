@@ -4,11 +4,11 @@
 <html>
 	<head>
 		{% bootstrap_css %}
-		{% bootstrap_js %}
+		{% bootstrap_js all %}
 	</head>
 	<body>
 		<div class="container">
-		<div class="navbar navbar-fixed-top">
+		<div class="navbar navbar-static-top">
 			<div class="navbar-inner">
 				<a class="brand" href='/'>Politichange</a>
 				<ul class="nav">
@@ -22,7 +22,7 @@
 {% if all_users %}
 	<ul>
 		{% for user in all_users %}
-		<li>{% gravatar user.email  %} {{ user.email }}</li>
+		<li>{% gravatar user.email 32 %} {{ user.name }}</li>
 		{% endfor %}
 	</ul>
 {% endif %}
