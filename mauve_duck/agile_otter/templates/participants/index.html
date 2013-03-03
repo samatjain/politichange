@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load gravatar %}
+
+{% block title %}Participants{% endblock %}
+
+{% block content %}
+
+{% if all_users %}
+       <div class="avatar-list">
+               {% for user in all_users %}
+               <div class="avatar">{% gravatar user.email 96 %}</div>
+               {% endfor %}
+       </div>
+{% endif %}
+
+{% endblock %}

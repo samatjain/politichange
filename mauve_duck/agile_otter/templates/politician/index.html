@@ -1,44 +1,38 @@
 {% extends "base.html" %}
 
-        {% block content %}
-        <div id="leadIn">
-            <p>"Campaign Critter is a platform for citizens to become more involved<br /> in government as a new official, or supporting new officials."</p>
-        </div>
-        
-        
-        <div id="main">
-            <div class="col-2">
-                <a class="blue" href="create-campaign.html" title="Create a new campaign"><strong>Create</strong> a<br/> New Campaign</a>
-                <p class="blue top">Details about creating a campaign</p>
-                <h3>You will need to have the following before you begin</h3>
-                <ul>
-                    <li>Qui accusamus trust fund typewriter.</li>
-                    <li>Literally aliquip lomo small batch in wes anderson YOLO. Ad iphone keffiyeh, carles veniam</li>
-                    <li>freegan typewriter duis tousled fixie. Letterpress</li>
-                    <li>you probably haven't heard of them keffiyeh aliquip ethnic officia neutra</li>
-                </ul>
-            </div>
-            <div class="col-2">
-                <a class="blue" href="#" title="Update an existing campaign"><strong>Update</strong> an<br/> Existing Campaign</a>
-                <p class="blue top">Details about updating a campaign</p>
-                <h3>You will need to have the following before you begin</h3>
-                <ul>
-                    <li>Qui accusamus trust fund typewriter.</li>
-                    <li>Literally aliquip lomo small batch in wes anderson YOLO. Ad iphone keffiyeh, carles veniam</li>
-                    <li>freegan typewriter duis tousled fixie. Letterpress</li>
-                    <li>you probably haven't heard of them keffiyeh aliquip ethnic officia neutra</li>
-                </ul>
-            </div>
-            <div class="col-2">
-                <a class="blue" href="#" title="Delete an existing campaign"><strong>Delete</strong> an<br/> Existing Campaign</a>
-                <p class="blue top">Details about deleting a campaign</p>
-                <h3>You will need to have the following before you begin</h3>
-                <ul>
-                    <li>Qui accusamus trust fund typewriter.</li>
-                    <li>Literally aliquip lomo small batch in wes anderson YOLO. Ad iphone keffiyeh, carles veniam</li>
-                    <li>freegan typewriter duis tousled fixie. Letterpress</li>
-                    <li>you probably haven't heard of them keffiyeh aliquip ethnic officia neutra</li>
-                </ul>
-            </div>
-        </div>
-       {% endblock %}
+{% block content %}
+<div id="campaign-index">
+	<div class="row-fluid">
+		<div class="span4">
+				<a class="btn btn-large" href="create-campaign.html" title="Create a new campaign"><strong>Create</strong> Campaign</a>
+				<p>You will need to have the following before you begin</p>
+				<ul>
+						<li>Qui accusamus trust fund typewriter.</li>
+						<li>Literally aliquip lomo small batch in wes anderson YOLO. Ad iphone keffiyeh, carles veniam</li>
+						<li>freegan typewriter duis tousled fixie. Letterpress</li>
+						<li>you probably haven't heard of them keffiyeh aliquip ethnic officia neutra</li>
+				</ul>
+		</div>
+		<div class="span4">
+				<a class="btn btn-large" href="#" title="Update an existing campaign"><strong>Update</strong> Campaign</a>
+				<p>You will need to have the following before you begin</p>
+				<ul>
+						<li>Qui accusamus trust fund typewriter.</li>
+						<li>Literally aliquip lomo small batch in wes anderson YOLO. Ad iphone keffiyeh, carles veniam</li>
+						<li>freegan typewriter duis tousled fixie. Letterpress</li>
+						<li>you probably haven't heard of them keffiyeh aliquip ethnic officia neutra</li>
+				</ul>
+		</div>
+		<div class="span4">
+				<a class="btn btn-large" href="#" title="Delete an existing campaign"><strong>Delete</strong> Campaign</a>
+				<p>You will need to have the following before you begin</p>
+				<ul>
+						<li>Qui accusamus trust fund typewriter.</li>
+						<li>Literally aliquip lomo small batch in wes anderson YOLO. Ad iphone keffiyeh, carles veniam</li>
+						<li>freegan typewriter duis tousled fixie. Letterpress</li>
+						<li>you probably haven't heard of them keffiyeh aliquip ethnic officia neutra</li>
+				</ul>
+		</div>
+	</div>
+</div>
+{% endblock %}
