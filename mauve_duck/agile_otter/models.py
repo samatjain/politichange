@@ -23,7 +23,7 @@ class Stance(models.Model):
 	text	= models.TextField()
 
 class Participant(models.Model):
-	user 			= models.ForeignKey('User', unique=True)
+	user 			= models.ForeignKey('django.contrib.auth.models.User', unique=True)
 	address 		= models.CharField(max_length=255)
 	bio     		= models.TextField()
 	philosophy 	= models.TextField(blank=True,null=True)
