@@ -26,6 +26,7 @@ urlpatterns = patterns('',
  	 url(r'^campaign$', views.registration, name='register'),
 
  	 url(r'^participants$', views.participants_list, name='register'),
+ 	 url(r'^participants/me$', views.participant_me),
  	 url(r'^participants/profile-female$', views.participant_profile, name='profile'),
  	 url(r'^participants/logout$', django.contrib.auth.views.logout, name='logout'),
 

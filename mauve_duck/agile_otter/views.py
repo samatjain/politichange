@@ -21,6 +21,10 @@ def participants_list(request):
             }
     return render(request, 'participants/index.html', context)
 
+def participant_me(request):
+	"""Profile page"""
+	return render(request, 'participants/profile-self.html', {})	
+
 def participant_profile(request):
 	"""Profile page"""
 	return render(request, 'participants/profile-female.html', {})	
