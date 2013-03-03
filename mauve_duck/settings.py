@@ -4,7 +4,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Ronnie Garduno', 'koko@rpg-free.com'),
 )
 
 MANAGERS = ADMINS
@@ -116,6 +116,7 @@ TEMPLATE_DIRS = (
 INSTALLED_APPS = (
     'django.contrib.auth',
 	 'django_browserid',
+	 'django_gravatar',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
@@ -165,7 +166,3 @@ DATABASES['default'] =  dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-AUTHENTICATION_BACKENDS = (
-        'django_browserid.auth.BrowserIDBackend',
-)

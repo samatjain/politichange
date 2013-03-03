@@ -1,7 +1,9 @@
+{% load gravatar %}
+
 {% if all_users %}
 	<ul>
 		{% for user in all_users %}
-		<li>{{ user.email }}</li>
+		<li>{% gravatar_url user.email 150 %}{{ user.email }}</li>
 		{% endfor %}
 	</ul>
 {% endif %}
