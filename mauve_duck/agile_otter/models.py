@@ -16,7 +16,7 @@ class Campaign(models.Model):
 	electionEndDate	= models.DateField()
 	amountPledged		= models.DecimalField(max_digits=8, decimal_places=0)
 	numberSupporters  = models.DecimalField(max_digits=8, decimal_places=0)
-	#links					= models.ForeignKey(Link)
+	links					= models.ForeignKey(Link)
 
 class Stance(models.Model):
 	text	= models.TextField()
@@ -28,7 +28,7 @@ class Participant(models.Model):
 	bio     		= models.TextField()
 	philosophy 	= models.TextField()
 	goals			= models.CharField(max_length=255)
-	#links			= models.ForeignKey(Link)
+	links			= models.ForeignKey(Link)
 
 models = [Campaign, Link, Stance, Participant]
 
