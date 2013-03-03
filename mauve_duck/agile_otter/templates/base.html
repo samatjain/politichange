@@ -22,12 +22,11 @@
 				</ul>
 				<ul class="nav pull-right">
 					<li>
-					{% if not user.is_authenticated %}
-					<a class="browserid-login" href="#">Sign In</a>
-					{% else %}
-					<a href="">Signed in as {{ user.email }}</a>
-					(<a href="{% url 'logout' %}">Log out</a>)
-					{% endif %}
+						{% if not user.is_authenticated %}
+						<a class="browserid-login" href="#">Sign In</a>
+						{% else %}
+						<a href="">Signed in as {{ user.email }}</a> (<a href="{% url 'logout' %}">Log out</a>)
+						{% endif %}
 					</li>
 				</ul>
 			</div>
