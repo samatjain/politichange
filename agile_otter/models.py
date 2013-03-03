@@ -1,6 +1,10 @@
 from django.db import models
 from django.contrib import admin
 
+class Link(models.Model):
+	title		=	models.CharField(max_length=255)
+	URL		=  models.CharField(max_length=255)
+
 class Campaign(models.Model):
 	position				= models.CharField(max_length=255)
 	# fiveStances 		= models.ForeignKey('Stance')
@@ -14,10 +18,6 @@ class Campaign(models.Model):
 	numberSupporters  = models.DecimalField(max_digits=8, decimal_places=0)
 	links					= models.ForeignKey(Link)
 
-class Link(models.Model):
-	title		=	models.CharField(max_length=255)
-	URL		=  models.CharField(max_length=255)
-	
 class Stance(models.Model):
 	text	= models.TextField()
 
