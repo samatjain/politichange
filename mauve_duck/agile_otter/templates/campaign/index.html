@@ -1,93 +1,43 @@
 {% extends "base.html"%}
         
 {% block content %}
-        <div id="leadIn">
-            <p>"Campaign Critter is a platform for citizens to become more involved<br /> in government as a new official, or supporting new officials."</p>
-        </div>
         
-        
-        <div id="main">
-            <div class="col-6 zipcode">
-            <p>Enter your zipcode to begin supporting candidates near you</p>
-            <form><input class="big" type="text" name="zipcode" placeholder="zipcode"></form>
-            <a href="#" class="button" >Advanced Search</a>
-            </div>
-            <a class="col-3 list first" href="./constituent/profile-male.html" class="3col profile" title="">
-                <img src="../images/photo-male-sm.jpg" alt="">
-                <h3>First Last</h3>
-                <p>Position, State</p>
-                <p class=caption>Party alignment</p>
-                <img src="../images/progress-red.jpg" alt="">
-                <table>
-                    <tr>
-                        <td>XX %</td>
-                        <td>$X,XXX</td>
-                        <td>XX</td>
-                    </tr>
-                    <tr>
-                        <td>Funded</td>
-                        <td>Pledged</td>
-                        <td>Days to go</td>
-                    </tr>
-                </table>
-            </a>
-            <a class="col-3 list first" href="./constituent/profile-female.html" class="3col profile" title="">
-                <img src="../images/photo-female-sm.jpg" alt="">
-                <h3>First Last</h3>
-                <p>Position, State</p>
-                <p class=caption>Party alignment</p>
-                <img src="../images/progress-red.jpg" alt="">
-                <table>
-                    <tr>
-                        <td>XX %</td>
-                        <td>$X,XXX</td>
-                        <td>XX</td>
-                    </tr>
-                    <tr>
-                        <td>Funded</td>
-                        <td>Pledged</td>
-                        <td>Days to go</td>
-                    </tr>
-                </table>
-            </a>
-            <a class="col-3 list" href="./constituent/profile-male.html" class="3col profile" title="">
-                <img src="../images/photo-male-sm.jpg" alt="">
-                <h3>First Last</h3>
-                <p>Position, State</p>
-                <p class=caption>Party alignment</p>
-                <img src="../images/progress-red.jpg" alt="">
-                <table>
-                    <tr>
-                        <td>XX %</td>
-                        <td>$X,XXX</td>
-                        <td>XX</td>
-                    </tr>
-                    <tr>
-                        <td>Funded</td>
-                        <td>Pledged</td>
-                        <td>Days to go</td>
-                    </tr>
-                </table>
-            </a>
-            <a class="col-3 list" href="./constituent/profile-female.html" class="3col profile" title="">
-                <img src="../images/photo-female-sm.jpg" alt="">
-                <h3>First Last</h3>
-                <p>Position, State</p>
-                <p class=caption>Party alignment</p>
-                <img src="../images/progress-red.jpg" alt="">
-                <table>
-                    <tr>
-                        <td>XX %</td>
-                        <td>$X,XXX</td>
-                        <td>XX</td>
-                    </tr>
-                    <tr>
-                        <td>Funded</td>
-                        <td>Pledged</td>
-                        <td>Days to go</td>
-                    </tr>
-                </table>
-            </a>
-        </div>
-        
-       {% endblock %}
+<div id="campaigns-index">
+	<div class="zipcode">
+		<p>Enter your zipcode to begin supporting candidates near you</p>
+		<form>
+			<input class="big" type="text" name="zipcode" placeholder="zipcode">
+		</form>
+	</div>
+
+	<ul class="thumbnails">
+
+		<li class="span4">
+		<div class="thumbnail">
+			<a href="./constituent/profile-female.html">
+				<img src="/static/images/photo-female-sm.jpg" alt="">
+				<h3>First Last</h3>
+				<p>Position, State</p>
+				<p>Party alignment</p>
+				<img src="/static/images/progress-red.jpg" alt="">
+				<table>
+						<tr>
+								<td>XX%</td>
+								<td>$X,XXX</td>
+								<td>XX</td>
+						</tr>
+						<tr>
+								<td>Funded</td>
+								<td>Pledged</td>
+								<td>Days to go</td>
+						</tr>
+				</table>
+			</a>
+</div>
+	</li>
+
+</ul>
+
+</div>
+
+{% endblock %}

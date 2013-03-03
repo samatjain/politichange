@@ -10,6 +10,13 @@ def index(request):
             }
     return render(request, 'index.html', context)
 
+def participants_list(request):
+    all_users = Participant.objects.all()
+    context = {
+            'all_users': all_users
+            }
+    return render(request, 'participants/index.html', context)
+
 def registration(request):
 	"""Registration page template called and info saved"""
 	context = {           }

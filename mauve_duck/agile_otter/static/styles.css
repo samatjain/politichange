@@ -6,3 +6,7 @@ footer {
 .hero-unit {
 	margin: 1em;
 }
+
+#campaigns-index .thumbnails a {
+	display: block;
+}
