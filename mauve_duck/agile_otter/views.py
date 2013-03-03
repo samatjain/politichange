@@ -1,3 +1,5 @@
+import django.contrib.auth.logout
+
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -63,3 +65,6 @@ def campaign(request):
 	return render(request, 'campaign.html',{
 		form : form,
 	})
+
+def logout(request):
+	django.contrib.auth.logout(request)
