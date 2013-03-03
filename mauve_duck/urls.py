@@ -21,4 +21,6 @@ urlpatterns = patterns('',
     url(r'^browserid/', include('django_browserid.urls')),
 
  	 url(r'^constituent/index', views.registration, name='register'),
+
+ 	 url(r'^politician/index', views.start_campaign, name='campaign_start'),
 )

@@ -14,3 +14,7 @@ def registration(request):
 	"""Registration page template called and info saved"""
 	context = {           }
 	return render(request, 'constituent/index.html', context)
+
+def start_campaign(request):
+	"""Register a new campaign """
+	return render(request, 'politician/index.html', {})
