@@ -159,7 +159,7 @@ LOGGING = {
     }
 }
 
-SITE_URL = 'http://mauve-duck.herokuapp.com/'
+SITE_URL = 'http://politichange.herokuapp.com/'
 
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
