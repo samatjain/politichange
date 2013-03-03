@@ -1,3 +1,5 @@
+import django.contrib.auth.views
+
 from django.conf.urls import patterns, include, url
 
 from mauve_duck.agile_otter import views
@@ -25,7 +27,7 @@ urlpatterns = patterns('',
 
  	 url(r'^participants$', views.participants_list, name='register'),
  	 url(r'^participants/profile-female$', views.participant_profile, name='profile'),
- 	 url(r'^participants/logout$', views.logout, name='logout'),
+ 	 url(r'^participants/logout$', django.contrib.auth.views.logout, name='logout'),
 
  	 url(r'^politician$', views.politician_start, name='politician_start'),
  	 url(r'^politician/create-campaign', views.start_campaign, name='campaign_start'),
