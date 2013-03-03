@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 from mauve_duck.agile_otter.models import Participant
 
-# from mauve_duck.agile_otter import CampaignForm
+from mauve_duck.agile_otter.forms import CampaignForm
 
 def index(request):
     all_users = Participant.objects.all()
