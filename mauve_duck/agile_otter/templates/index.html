@@ -1,9 +1,23 @@
 {% load gravatar %}
+{% load bootstrap %}
+<!DOCTYPE html>
+<html>
+	<head>
+		{% bootstrap_css %}
+		{% bootstrap_js %}
+	</head>
+	<body>
+		<header class="navbar">
+			<h1>Politichange</h1>
+		</header>
 
 {% if all_users %}
 	<ul>
 		{% for user in all_users %}
-		<li>{% gravatar user.email 150 %} {{ user.email }}</li>
+		<li>{% gravatar user.email  %} {{ user.email }}</li>
 		{% endfor %}
 	</ul>
 {% endif %}
+
+</body>
+</html>
