@@ -9,5 +9,5 @@ heroku:
 	heroku run python manage.py syncdb
 #	heroku run python manage.py collectstatic
 
-nuke: heroku
+nuke:
 	heroku pg:reset DATABASE_URL
