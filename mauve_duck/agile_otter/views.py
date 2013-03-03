@@ -12,4 +12,5 @@ def index(request):
 
 def registration(request):
 	"""Registration page template called and info saved"""
+	context = {           }
 	return render(request, 'constituent/index.html', context)
