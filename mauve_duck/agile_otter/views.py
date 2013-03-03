@@ -3,6 +3,8 @@ from django.shortcuts import render
 
 from mauve_duck.agile_otter.models import Participant
 
+from mauve_duck.agile_otter.forms import CampaignForm
+
 def index(request):
     all_users = Participant.objects.all()
     context = {
@@ -46,5 +48,14 @@ def politician_start(request):
 	"""page for politician action initiation """
 	return render(request, 'politician/index.html', {})
 	
-def campaign(form):
-	return render(request, 'politician/campaign.html', {})
+def campaign(request):
+	if	request.method == 'POST':
+		form = CampaignForm(request.POST)
+		if form.is_valid():
+			return HttpResponseRedirect('/')
+	else:
+		form = CampaignForm()
+		
+	return render(request, 'campaign.html',{
+		form : form,
+	})
