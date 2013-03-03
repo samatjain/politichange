@@ -29,4 +29,4 @@ class Link(models.Model):
 	
 models = [User, Campaign, Link]
 
-map(admin.site.register,models)
+# map(admin.site.register,models)
