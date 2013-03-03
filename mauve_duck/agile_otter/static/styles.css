@@ -10,3 +10,20 @@ footer {
 #campaigns-index .thumbnails a {
 	display: block;
 }
+
+.avatar-list {
+        padding: 1ex;
+}
+
+.avatar {
+        display: inline-block;
+        border: 1px solid #999;
+        border-radius: 50%;
+        box-shadow: 0px 1px 1px 1px #bbb;
+        padding: 3px;
+}
+.avatar img {
+        border: 0;
+        margin: 0;
+        border-radius: 50%;
+}
