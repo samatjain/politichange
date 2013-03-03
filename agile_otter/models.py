@@ -4,7 +4,7 @@ from django.contrib import admin
 class User(models.Model):
 	name 	  		= models.CharField(max_length=255)
 	address 		= models.CharField(max_length=255)
-	email	  		= models.EmailField(max_length=255)
+	email	  		= models.EmailField(max_length=255,unique=True)
 	bio     		= models.TextField()
 	philosophy 	= models.TextField()
 	goals			= models.CharField(max_length=255)
