@@ -1,4 +1,4 @@
-import django.contrib.auth.logout
+import django.contrib.auth
 
 from django.http import HttpResponse
 from django.shortcuts import render
