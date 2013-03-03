@@ -7,7 +7,7 @@ class Link(models.Model):
 
 class Campaign(models.Model):
 	position				= models.CharField(max_length=255)
-	# fiveStances 		= models.ForeignKey('Stance')
+	fiveStances 		= models.ForeignKey('Stance')
 	first100Days		= models.TextField()
 	whyBestCandidate	= models.TextField()
 	videoURL				= models.CharField(max_length=255)
