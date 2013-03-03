@@ -19,6 +19,10 @@ def participants_list(request):
             }
     return render(request, 'participants/index.html', context)
 
+def participant_profile(request):
+	"""Profile page"""
+	return render(request, 'participants/profile-female.html', {})	
+
 def registration(request):
 	"""Registration page template called and info saved"""
 	context = {           }
