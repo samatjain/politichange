@@ -24,7 +24,7 @@
 					<li>
 					{% if not user.is_authenticated %}
 					<a class="browserid-login" href="#">Sign In</a>
-					{% elif %}
+					{% else %}
 					<a href="">Signed in as {{ user.email }}</a>
 					{% endif %}
 					</li>
