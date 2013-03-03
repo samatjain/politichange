@@ -155,3 +155,5 @@ LOGGING = {
         },
     }
 }
+
+SITE_URL = 'http://mauve-duck.herokuapp.com/'
