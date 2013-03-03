@@ -13,12 +13,31 @@ def index(request):
 def registration(request):
 	"""Registration page template called and info saved"""
 	context = {           }
-	return render(request, 'constituent/index.html', context)
+	return render(request, 'campaign/index.html', context)
 
 def start_campaign(request):
 	"""Register a new campaign """
+	from django.shortcuts import render
+	from django.http import HttpResponseRedirect
+
+	def contact(request):
+	    if request.method == 'POST': # If the form has been submitted...
+	        form = CampaignForm(request.POST) # A form bound to the POST data
+	        if form.is_valid(): # All validation rules pass
+	            # Process the data in form.cleaned_data
+	            # ...
+	            return HttpResponseRedirect('/thanks/') # Redirect after POST
+	    else:
+	        form = CampaignForm() # An unbound form
+
+	    return render(request, 'politician/campaign.html', {
+	        'form': form,
+	    })
 	return render(request, 'politician/create-campaign.html', {})
 	
 def politician_start(request):
 	"""page for politician action initiation """
 	return render(request, 'politician/index.html', {})
+	
+def campaign(form):
+	return render(request, 'politician/campaign.html', {})
