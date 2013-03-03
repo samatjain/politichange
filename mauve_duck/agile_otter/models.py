@@ -1,6 +1,10 @@
 from django.db import models
 from django.contrib import admin
 
+class Link(models.Model):
+	title		=	models.CharField(max_length=255)
+	URL		=  models.CharField(max_length=255)
+
 class Campaign(models.Model):
 	position				= models.CharField(max_length=255)
 	# fiveStances 		= models.ForeignKey('Stance')
@@ -12,12 +16,8 @@ class Campaign(models.Model):
 	electionEndDate	= models.DateField()
 	amountPledged		= models.DecimalField(max_digits=8, decimal_places=0)
 	numberSupporters  = models.DecimalField(max_digits=8, decimal_places=0)
-	links					= models.ForeignKey(Link)
+	#links					= models.ForeignKey(Link)
 
-class Link(models.Model):
-	title		=	models.CharField(max_length=255)
-	URL		=  models.CharField(max_length=255)
-	
 class Stance(models.Model):
 	text	= models.TextField()
 
@@ -28,7 +28,7 @@ class Participant(models.Model):
 	bio     		= models.TextField()
 	philosophy 	= models.TextField()
 	goals			= models.CharField(max_length=255)
-	links			= models.ForeignKey(Link)
+	#links			= models.ForeignKey(Link)
 
 models = [Campaign, Link, Stance, Participant]
 
