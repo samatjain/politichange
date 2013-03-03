@@ -7,6 +7,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
 		<style>
+			article {
+				padding: 1em;
+			}
+
+			.avatar-list {
+				padding: 1ex;
+			}
+
 			.avatar {
 				display: inline-block;
 				border: 1px solid #999;
@@ -35,7 +43,9 @@
 			</div>
 		</div>
 
-	{% block content %}{% endblock %}
+		<article>
+		{% block content %}{% endblock %}
+		</article>
 
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
