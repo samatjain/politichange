@@ -7,8 +7,8 @@
 
 {% if all_users %}
        <div class="avatar-list">
-               {% for user in all_users %}
-               <div class="avatar">{% gravatar user.email 96 %}</div>
+               {% for u in all_users %}
+               <div class="avatar">{% gravatar u.user.email 96 %}</div>
                {% endfor %}
        </div>
 {% endif %}
