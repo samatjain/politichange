@@ -13,8 +13,8 @@ class User(models.Model):
 class Campaign(models.Model):
 	position				= models.CharField(max_length=255)
 	# fiveStances 		= models.ManyToManyField()
-	first100Days		= models.CharField(max_length=255)
-	whyBestCandidate	= models.CharText()
+	first100Days		= models.TextField()
+	whyBestCandidate	= models.TextField()
 	videoURL				= models.CharField(max_length=255)
 	fundingThreshold	= models.DecimalField(max_digits=8, decimal_places=0)
 	campaignEndDate	= models.DateField()
