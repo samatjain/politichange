@@ -47,6 +47,6 @@ def campaign(request):
 	else:
 		form = CampaignForm()
 		
-	return render(request, 'campaign.html'{
+	return render(request, 'campaign.html',{
 		form : form,
 	})
