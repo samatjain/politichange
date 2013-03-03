@@ -1,4 +1,4 @@
-from django import ModelForm
+from django.forms import ModelForm
 
 class CampaignForm(ModelForm):
 	class Meta:
