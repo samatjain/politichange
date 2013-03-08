@@ -159,7 +159,7 @@ LOGGING = {
     }
 }
 
-SITE_URL = 'http://politichange.herokuapp.com/'
+SITE_URL = 'http://politichange.herokuapp.com'
 LOGIN_REDIRECT_URL = '/'
 
 # Parse database configuration from $DATABASE_URL
