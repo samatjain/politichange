@@ -1,4 +1,5 @@
 {% load browserid %}
+{% load gravatar %}24
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,8 +27,14 @@
 						{% if not user.is_authenticated %}
 						<li>{% browserid_login text='Login' %}</li>
 						{% else %}
-						<li><a href="/participants/me">Signed in as {{ user.email }}</a></li>
-						<li>{% browserid_logout text='Logout' %}</li>
+						<li><a href="/participants/me">Signed in as {% gravatar u.user.email 24 %}{{ user.email }}</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="/participants/me">My profile</a></li>
+								<li>{% browserid_logout text='Logout' %}</li>
+							</ul>
+						</li>
 						{% endif %}
 				</ul>
 			</div>
