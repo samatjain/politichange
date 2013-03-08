@@ -22,10 +22,10 @@
 				</ul>
 				<ul class="nav pull-right">
 						{% if not user.is_authenticated %}
-						<li><a class="browserid-login" href="#">Sign In</a></li>
+						{% browserid_login text='Login' %}
 						{% else %}
 						<li><a href="/participants/me">Signed in as {{ user.email }}</a></li>
-						<li><a href="{% url 'logout' %}" class="browserid-logout">Log out</a></li>
+						<li>{% browserid_logout text='Logout' %}</li>
 						{% endif %}
 				</ul>
 			</div>
@@ -45,15 +45,8 @@
 	© 2013 Us. All rights reserved.
 </footer>
 
-{% if not user.is_authenticated %}
-<form method="POST" action="{% url 'browserid_verify' %}">
-	 {% csrf_token %}
-	 {{ browserid_form.as_p }}
-</form>
-{% endif %}
-
  </div>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-{{ browserid_form.media }}
+{{ browserid_js }}
 </body> </html>

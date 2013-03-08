@@ -178,11 +178,6 @@ AUTHENTICATION_BACKENDS = (
         'django_browserid.auth.BrowserIDBackend',
         )
 
-#TEMPLATE_CONTEXT_PROCESSORS = (
-#        'django.contrib.auth.context_processors.auth',
-#        'django_browserid.context_processors.browserid_form',
-#        )
-
 TEMPLATE_CONTEXT_PROCESSORS = (
         "django.contrib.auth.context_processors.auth",
         "django.core.context_processors.debug",
@@ -191,10 +186,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
         "django.core.context_processors.static",
         "django.core.context_processors.tz",
         "django.contrib.messages.context_processors.messages",
-        'django_browserid.context_processors.browserid_form',
+        "django_browserid.context_processors.browserid"
         )
-
-
 
 CSP_SCRIPT_SRC = ("'self'", 'https://login.persona.org')
 CSP_FRAME_SRC = ("'self'", 'https://login.persona.org')
