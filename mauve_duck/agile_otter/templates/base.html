@@ -13,6 +13,7 @@
 	<link type="text/css" href="/static/styles.css" rel="stylesheet">
 </head>
 <body>
+	{% browserid_info %}
 	<div class="navbar navbar-static-top">
 		<div class="navbar-inner">
 			<div class="container">
@@ -23,7 +24,7 @@
 				</ul>
 				<ul class="nav pull-right">
 						{% if not user.is_authenticated %}
-						{% browserid_login text='Login' %}
+						<li>{% browserid_login text='Login' %}</li>
 						{% else %}
 						<li><a href="/participants/me">Signed in as {{ user.email }}</a></li>
 						<li>{% browserid_logout text='Logout' %}</li>
@@ -49,5 +50,5 @@
  </div>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-{{ browserid_js }}
+{% browserid_js %}
 </body> </html>
