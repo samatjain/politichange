@@ -11,3 +11,15 @@ heroku:
 
 nuke:
 	heroku pg:reset DATABASE_URL
+
+serve:
+	. venv/bin/activate; python manage.py runserver
+
+venv: venv/bin/activate
+venv/bin/activate: requirements.txt
+	test -d venv || virtualenv venv
+	. venv/bin/activate; pip install -Ur requirements.txt
+	touch venv/bin/activate
+
+clean:
+	rm -rf venv
